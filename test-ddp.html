@@ -1,0 +1,33 @@
+<head>
+  <title>test-ddp</title>
+</head>
+
+<body>
+  <img width="64px" src="http://cl.ly/image/142a0q413G2p/Screen%20Shot%202014-06-06%20at%2012.44.26.png" />
+  <div class='col'>
+    {{> helloMeteor}}
+  </div>
+
+  <div class='col'>
+    {{> helloNode}}
+  </div>
+</body>
+
+<template name="helloMeteor">
+  <h4 style="color:{{color}}">Meteor</h4>
+  <h4>Status: {{ status }}/{{retryCount}} (retries)</h4>
+  <h4>{{reason}} ({{now}})</h4>
+  {{#each times}}
+    {{format time 'dddd DD.MM.YYYY HH:mm:ss'}}
+    <br/>
+  {{/each}}
+</template>
+
+<template name="helloNode">
+  <h4 style="color:{{color}}">Node</h4>
+  <div id='nodecontent'>
+    Nothing
+  </div>
+  <br/>
+  <button href="" id='nodereload'>Reload node</button>
+</template>

@@ -1,0 +1,8 @@
+{
+  "packages": {
+    "cron-tick": {},
+    "moment": {},
+    "iron-router": {},
+    "http-methods": {}
+  }
+}
